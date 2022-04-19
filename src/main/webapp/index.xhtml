@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+	<h:head>
+		<title>Revisao JSF</title>
+		<link rel="stylesheet" href="styles.css"/>
+	</h:head>
+	
+	<h:body>
+		<h:form>
+			<h:outputText>Aplicalçao em JSF</h:outputText>
+			<h:panelGrid columns="2">
+				<h:outputText value="Nome"/>
+				<h:inputText value="#{segundoBean.nome}"/>
+				<h:outputText value="Idade"/>
+				<h:inputText value="#{segundoBean.idade}"/>
+			</h:panelGrid>
+			<h:commandButton class="btn" value="Salvar" action="#{segundoBean.salvar}"/>
+		</h:form>
+	</h:body>
+</html>
