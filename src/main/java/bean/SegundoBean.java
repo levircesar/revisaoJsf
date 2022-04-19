@@ -13,8 +13,8 @@ public class SegundoBean {
 	public String salvar() {
 		System.out.println("Nome: " + nome);
 		System.out.println("Idade: " + idade);
-		setResultado(idade*3);
-		System.out.println("Resultado " + resultado);
+		setResultado(idade*2);
+		System.out.println("Resultado vezes dois: " + resultado);
 		return "cadastro";
 	}
 
