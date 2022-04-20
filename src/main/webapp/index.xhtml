@@ -15,12 +15,18 @@
 		<h:form>
 			<h:outputText>Aplicalçao em JSF</h:outputText>
 			<h:panelGrid columns="2">
-				<h:outputText value="Nome"/>
-				<h:inputText value="#{segundoBean.nome}"/>
-				<h:outputText value="Idade"/>
-				<h:inputText value="#{segundoBean.idade}"/>
+				<h:outputText value="Cor"/>
+				<h:inputText value="#{pincelBean.pincel.cor}"/>
+				<h:outputText value="Marca"/>
+				<h:inputText value="#{pincelBean.pincel.marca}"/>
 			</h:panelGrid>
-			<h:commandButton class="btn" value="Salvar" action="#{segundoBean.salvar}"/>
+			<h:commandButton class="btn" value="Salvar" action="#{pincelBean.salvar}"/>
+			<h:commandLink value="listar" action="listar.xhtml"/>
 		</h:form>
+		
+		<h:dataTable value="#{pincelBean.lista}" var="p">
+			<h:column><h:outputText value="#{p.cor}"/></h:column>
+			<h:column><h:outputText value="#{p.marca}"/></h:column>
+		</h:dataTable>
 	</h:body>
 </html>
