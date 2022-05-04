@@ -1,28 +1,71 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+<html xmlns:p="http://primefaces.org/ui"
+	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 
-	<h:head>
-		<title>Revisao JSF</title>
-		<link rel="stylesheet" href="styles.css"/>
-	</h:head>
-	
-	<h:body>
-		<h:form>
-			<h:panelGrid columns="2">
-				<h:outputText value="Bem vindo "/>
-				<h:outputText value="#{segundoBean.nome}"/>
-				<h:outputText value="Sua idade é "/>
-				<h:outputText value="#{segundoBean.idade}"/>
-				<h:outputText value="Seu resultado é "/>
-				<h:outputText value="#{segundoBean.resultado}"/>
-			</h:panelGrid>
-			<h:commandLink action="index.html">Voltar</h:commandLink>
-		</h:form>
-	</h:body>
+<h:head>
+	<title>Revisao JSF</title>
+	<link rel="stylesheet" href="styles.css" />
+</h:head>
+
+<h:body>
+	<h:form>
+		<div class="ui-g">
+			<div class="ui-g-12 ui-md-6 ui-lg-6">
+				<label for="firstname6">Firstname</label>
+				<p:inputText id="firstname6" type="text" />
+			</div>
+			<div class="ui-g-12 ui-md-6 ui-lg-6">
+				<label for="lastname6">Lastname</label>
+				<p:inputText id="lastname6" type="text" />
+			</div>
+			<div class="p-field p-col-12">
+				<label for="address">Address</label>
+				<p:inputTextarea id="address" rows="4" />
+			</div>
+			<div class="ui-g-12 ui-md-6 ui-lg-4">
+				<label for="city">City</label>
+				<p:inputText id="city" type="text" />
+			</div>
+			<div class="ui-g-12 ui-md-6 ui-lg-4">
+				<label for="state">State</label>
+				<p:selectOneMenu id="state">
+					<f:selectItem itemLabel="Select" itemValue="" />
+					<f:selectItem itemLabel="Arizona" itemValue="Arizona" />
+					<f:selectItem itemLabel="California" itemValue="California" />
+					<f:selectItem itemLabel="Florida" itemValue="Florida" />
+					<f:selectItem itemLabel="Ohio" itemValue="Ohio" />
+					<f:selectItem itemLabel="Washington" itemValue="Washington" />
+				</p:selectOneMenu>
+			</div>
+			<div class="p-field p-col-12 p-md-3">
+				<label for="zip">Zip</label>
+				<p:inputText id="zip" type="text" />
+			</div>
+		</div>
+	</h:form>
+	<div class="ui-g">
+		<div class="ui-g-12 ui-md-6 ui-lg-4">ui-g-12 ui-md-6 ui-lg-4</div>
+		<div class="ui-g-12 ui-md-6 ui-lg-4">ui-g-12 ui-md-6 ui-lg-4</div>
+		<div class="ui-g-12 ui-lg-4">ui-g-12 ui-lg-4</div>
+	</div>
+	<div class="p-grid nested-grid">
+		<div class="p-col-8">
+			<div class="p-grid">
+				<div class="p-col-6">6</div>
+				<div class="p-col-6">6</div>
+				<div class="p-col-12">12</div>
+			</div>
+		</div>
+		<div class="p-col-4">4</div>
+	</div>
+	<h5>Rounded and Outlined Icon Buttons</h5>
+	<p:commandButton type="button" value="Danger"
+		styleClass="ui-button-raised ui-button-danger" />
+
+</h:body>
 </html>
